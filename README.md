@@ -1,0 +1,2 @@
+# LINE_sticker_auto
+ｍｐ４からlineスタンプ用apngを自動作成
