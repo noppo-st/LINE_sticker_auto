@@ -23,10 +23,15 @@ Windows向けのPythonスクリプトです。
     参照：	https://ai-kenkyujo.com/programming/language/python/pil-install/
 
 使い方（超重要）
-１．videos フォルダに MP4動画 を入れる
-２．PowerShellでフォルダを開き下記のプロンプトをコピペ
-    cd C:\\work\\LINE\_sticker\_auto
-    python build\_apng.py
+１．LINE_sticker_auto.zip をダウンロード
+２．右クリックして「すべて展開」
+３．展開したフォルダを開く
+４．videos フォルダに MP4動画 を入れる（main,tab作成用動画を1.mv4とし最初に入れる）
+５．PowerShellでフォルダを開き、下記のプロンプトをコピペ
+
+cd LINE_sticker_auto
+python build_apng.py
+
 
 出力先
     dist/apng/        ← スタンプ用APNG
