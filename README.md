@@ -1,50 +1,75 @@
-LINE アニメーションスタンプ作成ツール（APNG自動生成）
-このツールは、MP4動画からLINEアニメーションスタンプ用APNGを自動生成する
-Windows向けのPythonスクリプトです。
+# 🎬 LINEアニメーションスタンプ自動作成ツール（Windows用）
 
-できること
-・MP4 → 透過PNG → APNG を自動作成
-・背景は透過、本体は透過させない処理
-・LINE審査仕様（秒数・サイズ・容量）に自動対応
-・main.png / tab.png / upload.zip を自動生成
+このツールは、MP4動画を入れるだけで、LINEアニメーションスタンプ用ファイルを自動で作ります。
 
-動作環境
-・Windows 10 / 11
-・Python 3.10 以上
-・ffmpeg / ffprobe（PATH設定済み）
-・ライブラリ：Pillow
+---
 
-事前準備（最初に一度だけ）
-１．Python をインストール
-    参照：	https://www.python.org/
-２．ffmpeg をインストールし PATH を通す
-    参照：	https://qiita.com/Tadataka_Takahashi/items/9dcb0cf308db6f5dc31b
-３．Pillow をインストール
-    参照：	https://ai-kenkyujo.com/programming/language/python/pil-install/
+# 🖥 最初にやること（1回だけ）
 
-使い方（超重要）
-１．LINE_sticker_auto.zip をダウンロード
-２．右クリックして「すべて展開」
-３．展開したフォルダを開く
-４．videos フォルダに MP4動画 を入れる（main,tab作成用動画を1.mv4とし最初に入れる）
-５．PowerShellでフォルダを開き、下記のプロンプトをコピペ
+## ① LINE_sticker_auto.zipをダウンロードする。
+1. LINE_sticker_auto.zip を右クリック
+2.「すべて展開」を展開する。
+3. LINE_sticker_autoフォルダーをデスクトップに置く（お勧め）
 
-cd LINE_sticker_auto
+---
+
+## ② build_apng.py を入れる
+1. GitHubページで build_apng.py をクリック  
+2. 右上の「Download」を押す  
+3. ダウンロードした build_apng.py をデスクトップのLINE_sticker_auto フォルダの中に入れる
+
+---
+
+## ③ Python 3.11 を入れる（重要）
+※ 必ず「Python 3.11」をインストールしてください。
+1. 次のページを開く  
+   https://www.python.org/downloads/release/python-3119/
+2. 「Windows installer (64-bit)」をクリック
+3. インストール時に　✔ Add Python to PATHにチェックを入れる
+4. Install Now を押す
+
+---
+
+## ④ 必要な部品を入れる
+1. LINE_sticker_auto フォルダを開く
+2. 右クリック →「PowerShellをここで開く」
+3. pip install pillow　を入力してEnter：
+成功と出ればOKです。
+
+---
+
+## ⑤ ffmpeg を入れる
+1. https://www.gyan.dev/ffmpeg/builds/ を開く  
+2. release builds をクリック  
+3. zipをダウンロードして解凍  
+4. 中にある「ffmpeg.exe」を  LINE_sticker_auto フォルダの中の
+tools フォルダに入れる
+
+---
+
+# 🚀 使い方
+1. videosフォルダにMP4動画を入れる  
+2. PowerShellで次を入力してEnter：
+
 python build_apng.py
 
+3. 完成ファイルは、submitフォルダに作られます  
 
-出力先
-    dist/apng/        ← スタンプ用APNG
-    submit/batch\_xxxx/
-    ├ upload.zip    ← LINE Creators Market提出用
-    ├ main.png
-    └ tab.png
+---
 
-注意事項（必ず読んでください）
-    本ツールは 個人利用・学習目的 に限り自由に使用できます
-    商用利用・再配布・改変後の再配布は禁止です
-    本ツールの使用によるトラブル・損害について作者は責任を負いません
+# 🎥 動画の条件（重要）
+・形式は mp4  
+・長さは 1～4秒がおすすめ  
+・キャラクターが画面のフチに触れない  
+・背景は #00FF00（明るい緑）  
+・本体が透過されていないか確認
+---
 
-免責
-    本ツールは無保証で提供されます。
-    使用はすべて自己責任でお願いします。ｍｐ４からlineスタンプ用apngを自動作成
+# ⚠ 透過処理の確認
+
+submitフォルダの画像を開き、
+
+✔ 体が消えていない  
+✔ 緑が残っていない  
+
+ことを確認してください。
