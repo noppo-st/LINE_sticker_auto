@@ -7,7 +7,7 @@
 # 🖥 最初にやること（1回だけ）
 
 ## ① LINE_sticker_auto.zipをダウンロードする。
-1. LINE_sticker_auto.zip を右クリック
+1. githubページで LINE_sticker_auto.zip を右クリック
 2.「すべて展開」を展開する。
 3. LINE_sticker_autoフォルダーをデスクトップに置く（お勧め）
 
