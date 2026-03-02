@@ -5,7 +5,9 @@
 ---
 
 # 🖥 最初にやること（1回だけ）
-
+ 下記Giphauのサイトに入る。
+ https://github.com/noppo-st/LINE_sticker_auto/blob/main/README.md
+ 
 ## ① LINE_sticker_auto.zipをダウンロードする。
 1. Githubページで LINE_sticker_auto.zip を右クリック
 2.「すべて展開」を展開する。
